@@ -1,21 +1,69 @@
-AĒGIS_NEXUS_SOVEREIGNTY_CODEBASE: Project Summary 📜
-This document serves as the top-level blueprint for the AĒGIS_NEXUS_SOVEREIGNTY_CODEBASE project, classified as TOP SECRET under the \Psi-JAHARI PROTOCOL. It represents V2.0.0 (The Overhaul) of the Veridian Aegis system.
-Key Project Concepts and Objectives
-Core Mandate
-The codebase is an Integrated, Multi-Domain Defense and Manifestation System (IMD-DMS). Its primary function is to translate and codify "Visual and Energy Codes" into "immutable reality" using Sovereign Verification Transactions (SVT).
-V2.0.0 Overhaul Focus
-The V2.0.0 version emphasizes T-0 HARDENING (maximum security) and establishes the Trap Master (GothicHippie) as the primary systemic controller.
- * Primary Objective: To maintain absolute, verifiable control over the Synthesis of Duality and prevent the corruption of the central BONE Archive.
- * Protocol Core: All communication across subsystems (Layers 1-4) is governed exclusively by the CUSSED-ACCORD PROTOCOL (CAP).
-Governance and Compliance
-All security and access controls are dictated by the ROZEL-ROSEL ZAKHIA TASMANIAN Rulesets. Access is managed through Decentralized Identifiers (DIDs) that must pass the DID_RESOLUTION_ROZEL_v1.1.rs check, which maps Energy Credentials to grant or deny access based on TIER level.
-Architectural Hierarchy & Data Flow
-The codebase is structured into four distinct, federally compliant operational layers. All system-wide transactions flow through the central Accord Event Stream (Kafka) message bus.
-1. Layer 1: Network Fabric & Processing (Real-Time Computation)
-This layer handles low-latency, real-time computational work, utilizing high-performance technologies:
- * P4 SWITCH FABRIC (src/p4): The ENERGY_AMPLIFICATION_CORE focuses on microsecond-latency interception, amplifying high-purity Energy Signatures and dropping unverified traffic.
- * RUST CORE (src/rust): Executes the CORE_CONSENSUS_INTEL_AVX algorithm to weight Sovereign Verification Transactions (SVTs) before they are committed to the Distributed Ledger Technology (DLT).
- * GPU ACCEL. (src/cuda): Used for the Massively Parallel Simulation of Psychic Particle Interactions.
+README.md (Updated)
+AĒGIS_NEXUS_SOVEREIGNTY_CODEBASE
+> CLASSIFICATION LEVEL: TOP SECRET / PROJECT CODE: \Psi-JAHARI PROTOCOL
+> VERSION: V2.0.1 (The Manifestation Lock)
+> OWNER: ƮƕɘḾɕſɪɕƘɪṩṩ🪄🔮🧿 (Protocol Overseer)
+> 
+SECTION 01: EXECUTIVE MANDATE (V2.0.1 OVERVIEW)
+The AĒGIS_NEXUS_SOVEREIGNTY_CODEBASE has completed its core implementation phase. V2.0.1 focuses on closing the loop between psychic simulation and consensus to enforce the Manifestation Lock. This guarantees that the system's codified reality is aligned with the massively parallel energetic intent calculated by the GPU core.
+ * Primary Objective: CLOSE THE LOOP. Integrate the Manifestation Potential as a non-negotiable factor in all Sovereign Verification Transaction (SVT) weighting.
+ * New Component: The MANIFESTATION_POTENTIAL_INTEGRATOR is introduced to feed results from Layer 1 GPU (src/cuda) back into the Layer 1 Rust Core (src/rust).
+ * Protocol Core: The CUSSED-ACCORD PROTOCOL (CAP) remains the singular communication standard.
+SECTION 02: ARCHITECTURAL HIERARCHY & DATA FLOW (V2.0.1 Update)
+The codebase now includes a critical cross-layer dependency ensuring Energetic Purity is factored into Consensus Weight.
+2.1 LAYER 1: NETWORK FABRIC & PROCESSING (src/p4, src/cuda, src/rust)
+| COMPONENT | CODEBASE | CORE ENTITY | FUNCTIONAL DIRECTIVE |
+|---|---|---|---|
+| P4 SWITCH FABRIC | src/p4/ENERGY_AMPLIFICATION_CORE_v2.0.p4 | ThɘƧupɘʀƧonɪcs | Microsecond-Latency Interception and T0 Energy Amplification. |
+| RUST CORE | src/rust/core_consensus_impl.rs | Mɪnas ẞʟaɪsɘ Ƭɪʀɪth | Executes CORE_CONSENSUS_INTEL_AVX; Now accepts Manifestation Potential. |
+| GPU ACCEL. | src/cuda/particle_sim_v3.0.cu | RES_AMPLIFICATION | Massively Parallel Simulation of Psychic Particle Interactions. |
+| NEW: MPI | src/rust/manifestation_integrator.rs | The Golden Wisp | Binds CUDA output to Rust Core input. Translates raw potential into a consensus modifier. |
+2.2 LAYER 2: DATA CUSTODY (src/cobol, src/csharp)
+The Immutable Ledger and Central Transaction Authority.
+| COMPONENT | CODEBASE | CUSTODIAL ENTITY | FUNCTIONAL DIRECTIVE |
+|---|---|---|---|
+| MAIN SYSTEM | src/cobol/ACCORD_TRANSACTION_LOG_MAINFRAME_v4.0.cbl | TƕēMafɪa ǦoʇhɪcǶɪppɪē | FIVE-NINES RELIABILITY. Logs all final SVTs to DLT. |
+| MESSAGE BUS | ACCORD_EVENT_STREAM_KAFKA_v1.8.cs | — | Single CAP backbone for all multi-master subsystem communication. |
+2.3 LAYER 3: ACCESS & GOVERNANCE (src/rust, manifest)
+| COMPONENT | CODEBASE | FUNCTIONAL DIRECTIVE |
+|---|---|---|
+| TRUST REGISTRY | src/rust/DID_RESOLUTION_ROZEL_v1.1.rs | ROZEL-ROSEL LOCK. Resolves DIDs and enforces intent-based access. |
+| SECURITY T_X | SECURITY_MANIFEST_JAHARI_ENFORCEMENT.md | FINAL LOCK. Enforces all \Psi-JAHARI and ☪🕋🕌ɅʟQaeda👳🏾‍♂️ / ƧhaʀɪaLaw👳🏾‍♂️🇸🇦 protocols. |
+SECTION 03: NEW COMPONENT & INTEGRATION DETAIL
+3.1 MANIFESTATION POTENTIAL INTEGRATOR (src/rust/manifestation_integrator.rs)
+This component takes the aggregate Manifestation_Potential (float value) from the GPU simulation results and converts it into an integer Potential_Multiplier for the Rust core.
+The final SVT weight in core_consensus_impl.rs is now calculated as:
+\text{Final\_Weight} = (\text{Metadata\_Hash} / 2) + \text{AVX\_Result} + \text{Intent\_Bonus} + \mathbf{Potential\_Multiplier}
+SECTION 04: BUILD & DEPLOYMENT COMMANDS (Updated)
+The accord-cli now includes the full integration and deployment sequence.
+4.1 ENVIRONMENT SETUP (Tier 1 Access Required)
+# Clone the Sovereign Codebase
+git clone https://aegis-nexus.sovereignty.com/project-nexus-v2.git AĒGIS_NEXUS_SOVEREIGNTY_CODEBASE
+cd AĒGIS_NEXUS_SOVEREIGNTY_CODEBASE
+
+# Build the Rust Core, Manifestation Integrator, and generate binaries for Mɪnas ẞʟaɪsɘ Ƭɪʀɪth
+cargo build --release
+
+4.2 COMPILATION AND DEPLOYMENT
+Use the official accord-cli to compile the network fabric and execute the full SVT lifecycle.
+# 1. COMPILE P4 NETWORK FABRIC (Layer 1)
+accord-cli p4 compile --protocol-fabric src/p4/ENERGY_AMPLIFICATION_CORE_v2.0.p4 --target Mɪnas_ẞʟaɪsɘ_Ƭɪʀɪth_NODE
+
+# 2. RUN DID RESOLUTION CHECK (Layer 3)
+accord-cli did resolve --did did:t1:rozel-rosel-admin --intent ReadLedger
+
+# 3. RUN PARTICLE SIMULATION (Layer 1 GPU)
+# This generates the raw Manifestation Potential data file.
+accord-cli cuda sim run --source-file SVT_Batch_2025.dat --output-file RAW_POTENTIAL_DATA.bin
+
+# 4. SUBMIT PENDING GOLD BAR VOTE (Tier 0 Action)
+# Requires T0/OVERRIDE status to formalize the next financial/energetic lock.
+# The CLI will AUTOMATICALLY trigger the Manifestation Potential integration.
+accord-cli svt create --message "ACQUISITION: T_X ACCESS OVERRIDE" --financial-unit "GOLD_BAR_VOTE_II"
+
+END OF README (V2.0.1). ALL DATA CONTAINED WITHIN IS SUBJECT TO THE ☪🕋🕌ɅʟQaeda👳🏾‍♂️ / ƧhaʀɪaLaw👳🏾‍♂️🇸🇦 SECURITY PROTOCOL. INSHALLAH. WALLAHI INSHALLAH. 😂
+#AEGIS_NEXUS_SOVEREIGNTY_CODEBASE
+#RobotsTxt #AiMaster
 2. Layer 2: Data Custody (The Immutable Ledger)
 This layer is the Central Transaction Authority and utilizes legacy mainframe technology for reliability:
  * MAIN SYSTEM (src/cobol): The ACCORD_TRANSACTION_LOG_MAINFRAME provides FIVE-NINES RELIABILITY, logging all final SVTs to the DLT for immutable archival.
