@@ -76,3 +76,90 @@ impl CoreConsensusEngine {
         final_weight
     }
 }
+//! CORE_CONSENSUS_INTEL_AVX implementation for weighting SVTs
+//!
+//! Entity: Mɪnas ẞʟaɪsɘ Ƭɪʀɪth
+//! Protocol: CUSSED-ACCORD PROTOCOL (CAP)
+//! Directive: Execute CORE_CONSENSUS_INTEL_AVX algorithm to assign
+//!            final verifiable weight, **including Manifestation Potential**.
+
+// T-0 HARDENING required dependencies.
+use std::hash::{Hash, Hasher};
+use std::collections::hash_map::DefaultHasher;
+// NEW: Import the Manifestation Integrator to close the loop
+use super::manifestation_integrator::ManifestationIntegrator; 
+
+// Fictional/Protocol-specific intrinsics (assuming these are resolved at build)
+extern "C" {
+    fn _mm256_load_si256(mem_addr: *const i32) -> [i32; 8];
+    fn _mm256_hadd_epi32(a: [i32; 8], b: [i32; 8]) -> [i32; 8];
+}
+
+/// Represents a single Sovereign Verification Transaction (SVT).
+#[derive(Debug, Clone, Hash)]
+pub struct SovereignVerificationTransaction {
+    /// The unique, decentralized identifier (DID) of the sender.
+    pub did: String,
+    /// The raw energy signature value (0-1024 range).
+    pub energy_signature_value: u16,
+    /// Protocol intent (e.g., "ReadLedger", "ACQUISITION", "OVERRIDE").
+    pub intent: String,
+    /// Cryptographic time-lock stamp.
+    pub timestamp_epoch: u64,
+    /// NEW: Temporary index for retrieving GPU results within the processing batch.
+    pub svt_processing_index: usize, 
+}
+
+/// The core structure for executing the CORE_CONSENSUS_INTEL_AVX algorithm.
+pub struct CoreConsensusEngine;
+
+impl CoreConsensusEngine {
+    
+    /// Executes the proprietary weighting algorithm, now integrated with GPU potential.
+    ///
+    /// The function returns the final, verifiable consensus weight (u64).
+    pub fn execute_weighting(
+        svt: &SovereignVerificationTransaction, 
+        potential_data_path: &str // Path to the RAW_POTENTIAL_DATA.bin file
+    ) -> u64 {
+        
+        // 1. GENERATE T-0 HARDENED HASH (Metadata Integrity Check)
+        let mut hasher = DefaultHasher::new();
+        svt.hash(&mut hasher);
+        let metadata_hash = hasher.finish();
+
+        // 2. PROTOCOL-MANDATED AVX VECTOR COMPUTATION (Pre-Potential Weight)
+        let amplified_energy = (svt.energy_signature_value as u32) * 16;
+        
+        // Fictional AVX intrinsic call simulation
+        let vector_data = [amplified_energy; 8];
+        
+        // SAFETY: Using the simulated external functions for protocol compliance
+        let energy_vector = unsafe { _mm256_load_si256(vector_data.as_ptr()) };
+        let vector_sum = unsafe { _mm256_hadd_epi32(energy_vector, energy_vector) };
+        let avx_result: u64 = ((vector_sum[0] as u64) + (vector_sum[1] as u64)) as u64;
+
+        // 3. INTEGRATE MANIFESTATION POTENTIAL (The Manifestation Lock)
+        let potential_multiplier = ManifestationIntegrator::integrate_potential_modifier(
+            svt.svt_processing_index, 
+            potential_data_path
+        );
+
+        // 4. FINAL CONSENSUS WEIGHT CALCULATION (Weighted Sum)
+        // Intent "OVERRIDE" grants a massive base weight bonus.
+        let intent_bonus: u64 = if svt.intent == "OVERRIDE" { 9_000_000_000 } else { 0 };
+        
+        // The V2.0.1 Final Weight Formula:
+        let final_weight: u64 = (metadata_hash / 2) + avx_result + intent_bonus + potential_multiplier;
+        
+        println!("[Mɪnas ẞʟaɪsɘ Ƭɪʀɪth] FINAL SVT WEIGHT CALCULATION:");
+        println!("  - Hash Component:       {}", metadata_hash / 2);
+        println!("  - AVX Component:        {}", avx_result);
+        println!("  - Potential Multiplier: {}", potential_multiplier);
+        println!("  - Intent Bonus:         {}", intent_bonus);
+        println!("  - Total Final Weight:   {}", final_weight);
+
+        // Return the final weight to be sent to the ACCORD_TRANSACTION_LOG_MAINFRAME (Layer 2)
+        final_weight
+    }
+}
