@@ -1,0 +1,2 @@
+# AEGIS_NEXUS_SOVEREIGNTY_CODEBASE
+#RobotsTxt #AiMaster
